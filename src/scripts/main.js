@@ -17,7 +17,11 @@ document.querySelectorAll('.tree li').forEach((li) => {
       li.removeChild(nodeText);
 
       spanElement.addEventListener('click', () => {
-        subList.style.display = subList.style.display === 'none' ? 'block' : 'none';
+        if (subList.style.display === 'none') {
+          subList.style.display = 'block'
+        } else {
+          subList.style.display = 'none'
+        }
       });
     }
   }
