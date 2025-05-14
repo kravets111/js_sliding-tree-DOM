@@ -16,11 +16,9 @@ document.querySelectorAll('.tree li').forEach((li) => {
       li.insertBefore(spanElement, nodeText);
       li.removeChild(nodeText);
 
-      subList.style.display = 'block';
-
       spanElement.addEventListener('click', () => {
         subList.style.display =
-          subList.style.display === 'block' ? 'none' : 'block';
+          subList.style.display === 'none' ? 'block' : 'none';
       });
     }
   }
